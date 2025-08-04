@@ -2,7 +2,7 @@ import React from 'react'
 
 const InboxPage = () => {
   return (
-    <div>InboxPage</div>
+    <div className= "max-padd-container">InboxPage</div>
   )
 }
 
