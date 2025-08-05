@@ -22,8 +22,12 @@ const shadowColors = [
   "0 4px 20px rgba(255, 215, 0, 0.5)",    
 ];
 
+const isNegative = msg.startsWith("-");
+const msgBg = isNegative ? "bg-red-300" : "bg-green-300";
+
 
   return (
+
     <div
     style={{ boxShadow: shadowColors[index % shadowColors.length] }}
      className={`rounded-lg p-6 border-2 border-gray-400 shadow-lg`
@@ -31,8 +35,10 @@ const shadowColors = [
     >
       <Image src={icon} alt={title} height={30} width={30} />
       <h2 className="text-lg font-bold mt-2">{title}</h2>
-      <p className="text-sm text-gray-500">{subtitle}</p>
-      <p className="text-gray-700">{msg}</p>
+      <div className="flex gap-4 mt-2 ">
+      <p className="font-medium text-md flex items-center  text-gray-500">{subtitle}</p>
+      <p className={`text-gray-700 font-bold p-2 border-2 rounded-md ${msgBg}`}>{msg}</p>
+      </div>
     </div>
   );
 };

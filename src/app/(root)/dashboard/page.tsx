@@ -1,6 +1,7 @@
 import React from 'react'
 import Cards from '../components/cards'
 import { cardsMock } from '../mocks/CardsMock'
+import DataTable from '../components/table/data-table'
 
 
 const page = () => {
@@ -8,7 +9,7 @@ const page = () => {
 
 
 return (
-    <div className='max-padd-container  w-full flex gap-7 '>
+    <div className='max-padd-container grid lg:grid-cols-4 sm:grid-cols-2  gap-7  '>
       {cardsMock.map((card, index) => (
         <Cards
           key={card.id}
@@ -19,6 +20,11 @@ return (
           index={index}
         />
       ))}
+
+      <section>
+        <h1>Table</h1>
+        <DataTable  />
+      </section>
       </div>
   )
 }
