@@ -21,8 +21,7 @@ return (
         />
       ))}
 
-      <section>
-        <h1>Table</h1>
+      <section className=''>
         <DataTable  />
       </section>
       </div>
